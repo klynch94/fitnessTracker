@@ -20,3 +20,5 @@ router.get("/api/workouts", (req, res) => {
         console.log(err);
     })
 })
+
+module.exports = router;
