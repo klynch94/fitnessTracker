@@ -11,3 +11,12 @@ router.post("/api/workouts", (req, res) => {
     })
 });
 
+// get all workouts
+router.get("/api/workouts", (req, res) => {
+    db.Workout.find({}).then(data => {
+        res.json(data);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
